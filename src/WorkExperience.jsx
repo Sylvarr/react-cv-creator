@@ -12,7 +12,7 @@ export default function WorkExperience({ data }) {
             <p>
               {item.startDate} - {item.endDate}
             </p>
-            <p>{item.responsibilities}</p>
+            <p>{item.responsibilities.join(". ")}</p>
           </li>
         ))}
       </ul>

@@ -20,7 +20,7 @@ export default function CVViewer() {
 
   return (
     <>
-      <PersonalInfo {...personalInfo} />
+      <PersonalInfo data={personalInfo} />
       <Education data={education} />
       <WorkExperience data={workExperience} />
       <Skills data={skills} />
