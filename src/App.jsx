@@ -1,5 +1,5 @@
 import "./tailwind.css";
-import CVViewer from "./creator/CVViewer";
+import CVViewer from "./viewer/CVViewer";
 // import CVCreator from "./viewer/CVCreator";
 
 function App() {
