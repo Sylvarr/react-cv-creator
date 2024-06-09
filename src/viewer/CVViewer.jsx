@@ -1,4 +1,3 @@
-import cvData from "../cvData.json";
 import PersonalInfo from "./PersonalInfo";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
@@ -7,28 +6,37 @@ import Projects from "./Projects";
 import Languages from "./Languages";
 import Interests from "./Interests";
 import Photo from "./Photo";
+import { useState, useEffect } from "react";
 
-export default function CVViewer() {
+export default function CVViewer(props) {
+  const [cvData, setCvData] = useState(props.cvData);
+
+  useEffect(() => {
+    setCvData(props.cvData);
+  }, [props.cvData]);
+
   const {
-    personalInfo,
-    education,
-    workExperience,
-    skills,
-    projects,
-    languages,
-    interests,
-  } = cvData;
+    personalInfo = {},
+    education = [],
+    workExperience = [],
+    skills = [],
+    projects = [],
+    languages = [],
+    interests = [],
+  } = cvData || {};
 
   return (
     <>
       <Photo />
       <PersonalInfo personalInfo={personalInfo} />
-      <Education education={education} />
-      <WorkExperience workExperience={workExperience} />
-      <Skills skills={skills} />
-      <Projects projects={projects} />
-      <Languages languages={languages} />
-      <Interests interests={interests} />
+      {education.length > 0 && <Education education={education} />}
+      {workExperience.length > 0 && (
+        <WorkExperience workExperience={workExperience} />
+      )}
+      {skills.length > 0 && <Skills skills={skills} />}
+      {projects.length > 0 && <Projects projects={projects} />}
+      {languages.length > 0 && <Languages languages={languages} />}
+      {interests.length > 0 && <Interests interests={interests} />}
     </>
   );
 }
