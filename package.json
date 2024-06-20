@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@million/lint": "^1.0.0-rc.18",
+    "base64-encode-file": "^1.0.7",
     "million": "^3.1.7",
     "postcss-cli": "^11.0.0",
     "react": "^18.2.0",

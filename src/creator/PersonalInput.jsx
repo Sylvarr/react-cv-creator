@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function PersonalInput(props) {
-  const { onCvDataChange } = props;
+  const onCvDataChange = props.onCvDataChange;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -35,6 +35,7 @@ export default function PersonalInput(props) {
 
   return (
     <div>
+      <h1>Personal Information</h1>
       <input
         type="text"
         placeholder="Name"

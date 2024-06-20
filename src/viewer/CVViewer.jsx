@@ -27,7 +27,7 @@ export default function CVViewer(props) {
 
   return (
     <>
-      <Photo />
+      {personalInfo.photo && <Photo photo={personalInfo.photo} />}
       <PersonalInfo personalInfo={personalInfo} />
       {education.length > 0 && <Education education={education} />}
       {workExperience.length > 0 && (
