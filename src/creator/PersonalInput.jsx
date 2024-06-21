@@ -34,28 +34,34 @@ export default function PersonalInput(props) {
   };
 
   return (
-    <div>
-      <h1>Personal Information</h1>
+    <div className="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h1 className="text-2xl font-bold text-gray-800 mb-4">
+        Personal Information
+      </h1>
       <input
         type="text"
+        className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500"
         placeholder="Name"
         value={name}
         onInput={handleNameChange}
       />
       <input
         type="email"
+        className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500"
         placeholder="Email"
         value={email}
         onInput={handleEmailChange}
       />
       <input
         type="tel"
+        className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500"
         placeholder="Phone"
         value={phone}
         onInput={handlePhoneChange}
       />
       <input
         type="text"
+        className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500"
         placeholder="Address"
         value={address}
         onInput={handleAddressChange}
